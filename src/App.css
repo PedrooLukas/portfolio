@@ -1,0 +1,29 @@
+
+@keyframes bg-pan-right {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+body {
+  /* Seus estilos de background existentes */
+  background: #000046; /* fallback para navegadores antigos */
+  background: -webkit-linear-gradient(to right, #1CB5E0, #000046); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #316370, #000046); /* Padrão */
+
+
+  background-size: 200% 100%;
+
+  /* 2. Aplique a animação */
+  animation: bg-pan-right 5s both infinite alternate;
+
+
+  font-family: 'Poppins', 'Arial'; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+  margin: 0;
+  overflow-x: hidden;
+}
