@@ -1,12 +1,13 @@
 import React from 'react'
 import { TypeAnimation } from 'react-type-animation';
-import pedro from '../imgs/pedro.png'; // Certifique-se que este caminho está correto
+import pedro from '../imgs/pedro.png';
+import pedroCV from '../imgs/pedrolukascv.pdf';
 
 const Hero = () => {
   return (
     <div id='home' className='pt-12 pb-10 sm:pt-16 md:pt-0'>
       {/* Container Flex Principal */}
-      <div className='flex flex-col md:flex-row md:justify-end items-center mt-8 md:mt-[5rem] px-4 md:px-0'>
+      <div className='flex flex-col lg:flex-row lg:justify-end items-center mt-8 md:mt-[5rem] px-4 md:px-0'>
         
         {/* Bloco de Conteúdo de Texto */}
         <div className='w-full md:w-auto text-center md:text-left md:mx-[60px] md:px-[1rem] order-2 md:order-1'>
@@ -32,14 +33,19 @@ const Hero = () => {
               className="h-10 sm:h-12 md:h-14" 
             />
           </div>
+                    <h2 className='font-light text-white text-xl sm:text-1xl md:text-[25px]'>
+    <a href={pedroCV} download>
+      Baixar Currículo <span className='text-[#A8F1FF]'>PDF</span>
+    </a>
+          </h2>
         </div>
         
         {/* Bloco da Imagem */}
         <div className='order-1 md:order-2 mb-8 md:mb-0'>
           <img 
             className='w-48 h-48 rounded-full object-cover 
-                       sm:w-60 sm:h-60 
-                       md:w-[680px] md:h-auto md:rounded-none'
+                      sm:w-60 sm:h-60 
+                      md:w-[680px] md:h-auto md:rounded-none'
             src={pedro} 
             alt="Desenvolvedor Pedro Lukas" 
           />
