@@ -14,7 +14,7 @@ const BarNav = () => {
 
   return (
     <div>
-      <nav className='w-full my-[2rem] flex justify-end items-center px-4 sm:px-6 md:px-0'>
+      <nav className='w-full my-[2rem] flex md:justify-center items-center px-4 sm:px-6 md:px-0 x3:m-12'>
         <div className='text-white hidden md:block'>
           <ul className='flex gap-10 items-center'>
             <a href="#home">
@@ -40,7 +40,7 @@ const BarNav = () => {
           </ul>
         </div>
 
-        <div className='md:hidden'>
+        <div className='md:hidden justify-end'>
           <button
             onClick={toggleMobileMenu}
             className='text-[#A8F1FF] text-[25px] p-2'

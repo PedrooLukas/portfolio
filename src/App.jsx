@@ -8,7 +8,7 @@ import Contato from './components/Contato'
 function App() {
   return (
     <div className='w-full'>
-      <div className='xl:mx-[300px]'>
+      <div className='x3:mx-[300px]'>
       <BarNav />
       <Hero />
       <Projects />

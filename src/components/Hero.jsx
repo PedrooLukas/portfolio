@@ -5,12 +5,12 @@ import pedroCV from '../imgs/pedrolukascv.pdf';
 
 const Hero = () => {
   return (
-    <div id='home' className='pt-12 pb-10 sm:pt-16 md:pt-0'>
+    <div id='home' className='pt-12 pb-10 sm:pt-16 xl:pt-0'>
       {/* Container Flex Principal */}
-      <div className='flex flex-col lg:flex-row lg:justify-end items-center mt-8 md:mt-[5rem] px-4 md:px-0'>
+      <div className='flex flex-col xl:flex-row justify-center items-center mt-8 md:mt-[5rem] px-5'>
         
         {/* Bloco de Conteúdo de Texto */}
-        <div className='w-full md:w-auto text-center md:text-left md:mx-[60px] md:px-[1rem] order-2 md:order-1'>
+        <div className='w-full md:w-auto text-center md:text-center md:mx-[60px] md:px-[1rem] order-2 md:order-1'>
           <h2 className='font-light text-white text-xl sm:text-1xl md:text-[25px]'>
             Olá, seja bem vindo!
           </h2>
