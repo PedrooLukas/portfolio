@@ -1,29 +1,40 @@
-
-@keyframes bg-pan-right {
+/* Primeiro, defina a nova animação que usa transform */
+@keyframes bg-pan-right-optimized {
   0% {
-    background-position: 0% 50%;
+    transform: translateX(0);
   }
   100% {
-    background-position: 100% 50%;
+    transform: translateX(-50%); /* Move para a esquerda metade da largura total */
   }
+}
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  /* Seus estilos de background existentes */
-  background: #000046; /* fallback para navegadores antigos */
-  background: -webkit-linear-gradient(to right, #1CB5E0, #000046); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #316370, #000046); /* Padrão */
-
-
-  background-size: 200% 100%;
-
-  /* 2. Aplique a animação */
-  animation: bg-pan-right 5s both infinite alternate;
-
-
-  font-family: 'Poppins', 'Arial'; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
+  /* Deixe o body com uma cor de fundo sólida como fallback */
+  background-color: #000046; 
+  font-family: 'Poppins', 'Arial', sans-serif;
   margin: 0;
   overflow-x: hidden;
+  position: relative; /* Necessário para o z-index do pseudo-elemento funcionar */
+}
+
+/* Agora, criamos o background animado no pseudo-elemento */
+body::before {
+  content: '';
+  position: fixed; /* Fixo para cobrir a tela inteira, independente do scroll */
+  top: 0;
+  left: 0;
+  width: 200%; /* O dobro da largura para ter espaço para animar */
+  height: 100%;
+  
+  /* O gradiente vai aqui */
+  background: linear-gradient(to right, #316370, #000046, #316370);
+  
+  /* A nova animação otimizada vai aqui */
+  animation: bg-pan-right-optimized 10s linear infinite alternate;
+  
+  /* Joga o background para trás de todo o conteúdo */
+  z-index: -1;
 }

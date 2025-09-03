@@ -1,5 +1,4 @@
 import React, { useState } from 'react'; // Importe useState
-import './BarNav.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faDisplay, faUser, faEnvelope, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
@@ -14,7 +13,7 @@ const BarNav = () => {
 
   return (
     <div>
-      <nav className='w-full my-[2rem] flex md:justify-center items-center px-4 sm:px-6 md:px-0 x3:m-12'>
+      <nav className='w-full text-[20px] my-[2rem] flex md:justify-center items-center px-4 sm:px-6 md:px-0 x3:m-12'>
         <div className='text-white hidden md:block'>
           <ul className='flex gap-10 items-center'>
             <a href="#home">
@@ -82,4 +81,4 @@ const BarNav = () => {
   );
 };
 
-export default BarNav;
+export default React.memo(BarNav)

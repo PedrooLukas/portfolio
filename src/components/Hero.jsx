@@ -1,7 +1,7 @@
 import React from 'react'
 import { TypeAnimation } from 'react-type-animation';
 import pedro from '../imgs/pedro.png';
-import pedroCV from '../imgs/pedrolukascv.pdf';
+import ats_pedrolukas from '../imgs/ats_pedrolukas.pdf';
 
 const Hero = () => {
   return (
@@ -15,16 +15,15 @@ const Hero = () => {
             Olá, seja bem vindo!
           </h2>
           <h1 className='font-light text-white text-xl sm:text-2xl md:text-[25px] mt-1'>
-            Me chamo 
-            <span className='block xs:inline text-[#A8F1FF] text-2xl sm:text-3xl md:text-[32px] font-semibold ml-0 xs:ml-1'> Pedro Lukas!</span>
+            Me chamo  <span className='xs:inline text-[#A8F1FF] text-2xl sm:text-3xl md:text-[32px] font-semibold ml-0 xs:ml-1'> Pedro Lukas!</span>
           </h1>
           
           {/* Container da TypeAnimation */}
           <div className='w-full md:min-w-[600px] mt-4'>
             <TypeAnimation
               sequence={[
-                'Sou um desenvolvedor Front-END.', 1000,
-                'Crio sites com React.', 1000
+                'Sou um desenvolvedor Full-Stack.', 1000,
+                'Stack: Java e React', 1000
               ]}
               wrapper="span"
               speed={50}
@@ -34,7 +33,7 @@ const Hero = () => {
             />
           </div>
                     <h2 className='font-light text-white text-xl sm:text-1xl md:text-[25px]'>
-    <a href={pedroCV} download>
+    <a href={ats_pedrolukas} download>
       Baixar Currículo <span className='text-[#A8F1FF]'>PDF</span>
     </a>
           </h2>
@@ -55,4 +54,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default React.memo(Hero)
