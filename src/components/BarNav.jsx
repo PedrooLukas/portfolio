@@ -1,45 +1,81 @@
-import React, { useState } from 'react'; // Importe useState
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faDisplay, faUser, faEnvelope, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import ReactCountryFlag from 'react-country-flag';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const BarNav = () => {
-  // Estado para controlar a visibilidade do menu mobile
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, toggleLanguage, t } = useLanguage();
 
-  // Função para alternar o estado do menu mobile
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(prevState => !prevState);
   };
 
   return (
     <div>
-      <nav className='w-full text-[20px] my-[2rem] flex md:justify-center items-center px-4 sm:px-6 md:px-0 x3:m-12'>
-        <div className='text-white hidden md:block'>
-          <ul className='flex gap-10 items-center'>
+      <nav className='w-full text-[20px] my-[2rem] flex md:justify-between items-center px-4 sm:px-6 md:px-8 x3:m-12'>
+        <div className='text-white hidden md:block flex-1'>
+          <ul className='flex gap-10 items-center justify-center'>
             <a href="#home">
               <li className='hover:text-[#A8F1FF] flex items-center gap-2'>
-                <FontAwesomeIcon icon={faHouse} /> Home
+                <FontAwesomeIcon icon={faHouse} /> {t.nav.home}
               </li>
             </a>
             <a href="#projetos">
               <li className='hover:text-[#A8F1FF] flex items-center gap-2'>
-                <FontAwesomeIcon icon={faDisplay} /> Projetos
+                <FontAwesomeIcon icon={faDisplay} /> {t.nav.projects}
               </li>
             </a>
             <a href="#about">
               <li className='hover:text-[#A8F1FF] flex items-center gap-2'>
-                <FontAwesomeIcon icon={faUser} /> Sobre mim
+                <FontAwesomeIcon icon={faUser} /> {t.nav.about}
               </li>
             </a>
             <a href="#contato">
               <li className='hover:text-[#A8F1FF] flex items-center gap-2'>
-                <FontAwesomeIcon icon={faEnvelope} /> Contato
+                <FontAwesomeIcon icon={faEnvelope} /> {t.nav.contact}
               </li>
             </a>
           </ul>
         </div>
 
-        <div className='md:hidden justify-end'>
+        {/* Language Toggle - Desktop */}
+        <div className='hidden md:flex items-center'>
+          <button
+            onClick={toggleLanguage}
+            className='flex items-center gap-2 text-white hover:text-[#A8F1FF] transition-colors duration-200'
+            title={language === 'pt-BR' ? 'Switch to English' : 'Mudar para Português'}
+          >
+            <ReactCountryFlag
+              countryCode={language === 'pt-BR' ? 'US' : 'BR'}
+              svg
+              style={{
+                width: '1.5em',
+                height: '1.5em',
+              }}
+            />
+            <span className='text-[16px]'>{language === 'pt-BR' ? 'EN' : 'PT'}</span>
+          </button>
+        </div>
+
+        <div className='md:hidden flex items-center gap-3'>
+          {/* Language Toggle - Mobile */}
+          <button
+            onClick={toggleLanguage}
+            className='text-white hover:text-[#A8F1FF] transition-colors'
+            title={language === 'pt-BR' ? 'Switch to English' : 'Mudar para Português'}
+          >
+            <ReactCountryFlag
+              countryCode={language === 'pt-BR' ? 'US' : 'BR'}
+              svg
+              style={{
+                width: '1.8em',
+                height: '1.8em',
+              }}
+            />
+          </button>
+          
           <button
             onClick={toggleMobileMenu}
             className='text-[#A8F1FF] text-[25px] p-2'
@@ -57,22 +93,22 @@ const BarNav = () => {
   <ul className='flex flex-col items-center gap-5 mt-3'>
     <a href="#home">
       <li className='hover:text-[#A8F1FF] flex items-center gap-2 text-lg'>
-        <FontAwesomeIcon icon={faHouse} /> Home
+        <FontAwesomeIcon icon={faHouse} /> {t.nav.home}
       </li>
     </a>
     <a href="#projetos">
       <li className='hover:text-[#A8F1FF] flex items-center gap-2 text-lg'>
-        <FontAwesomeIcon icon={faDisplay} /> Projetos
+        <FontAwesomeIcon icon={faDisplay} /> {t.nav.projects}
       </li>
     </a>
     <a href="#about">
       <li className='hover:text-[#A8F1FF] flex items-center gap-2 text-lg'>
-        <FontAwesomeIcon icon={faUser} /> Sobre mim
+        <FontAwesomeIcon icon={faUser} /> {t.nav.about}
       </li>
     </a>
     <a href="#contato">
       <li className='hover:text-[#A8F1FF] flex items-center gap-2 text-lg'>
-        <FontAwesomeIcon icon={faEnvelope} /> Contato
+        <FontAwesomeIcon icon={faEnvelope} /> {t.nav.contact}
       </li>
     </a>
   </ul>

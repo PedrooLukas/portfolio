@@ -1,39 +1,37 @@
 import React from 'react'
+import { useLanguage } from '../contexts/LanguageContext'
 
 const AboutMe = () => {
+  const { t } = useLanguage();
+  
   return (
-    <div id='about' className="flex flex-col items-center">
-      <h2 className='text-center text-white font-bold text-[35px] mt-[18rem] mb-[2rem]'>
-        Sobre mim
+    <div id='about' className="flex flex-col items-center container mx-auto px-4">
+      <h2 className='text-center text-white font-bold text-[35px] mt-[18rem] mb-[4rem]'>
+        {t.about.title}
       </h2>
 
-      <div className='text-justify text-[#316370] text-[20px] md:text-[25px] w-[90%] md:w-[50%] bg-[#B4C2D1] rounded-2xl p-9 mb-[3rem]'>
-        Olá! Me chamo <span className='text-black font-bold'>Pedro Lukas </span> 
-        e sou um <span className='text-black font-bold'>Desenvolvedor Full Stack </span> 
-        com afinidade no uso de <span className='text-black font-bold'>React</span>, 
-        <span className='text-black font-bold'> Java </span>e 
-        <span className='text-black font-bold'> Spring Boot</span>. 
-        Estou à procura de uma primeira experiência na área de desenvolvimento web. 
-        Estou sempre estudando e dedicado a aprender as tecnologias necessárias 
-        para atender a demanda dos usuários. Busco desenvolver projetos que contenham 
-        uma UI/UX agradável, boa performance e sempre atendam os pedidos. 
-        Gosto bastante de estudar e entender a lógica por trás de grandes 
-        aplicações da internet, e por isso estou constantemente aprendendo algo novo.
-      </div>
+      <div className='max-w-4xl w-full space-y-6 pb-[4rem]'>
+        <div className='bg-gradient-to-br from-[#1a2332] to-[#0f1620] border border-[#1CB5E0]/20 rounded-lg p-6 hover:border-[#1CB5E0]/60 hover:shadow-[0_0_30px_rgba(28,181,224,0.3)] transition-all duration-500'>
+          <p className='text-gray-300 text-base leading-relaxed'>
+            {t.about.intro} <span className='text-[#1CB5E0] font-bold'>Pedro Lukas </span> 
+            {t.about.introText} <span className='text-[#1CB5E0] font-bold'>{t.about.role} </span> 
+            {t.about.withAffinity} <span className='text-[#1CB5E0] font-bold'>React</span>, 
+            <span className='text-[#1CB5E0] font-bold'> Java </span>e 
+            <span className='text-[#1CB5E0] font-bold'> Spring Boot</span>. 
+            {t.about.lookingFor}
+          </p>
+        </div>
 
-      <div className='text-justify text-[#316370] text-[20px] md:text-[25px] w-[90%] md:w-[50%] bg-[#B4C2D1] rounded-2xl p-9 mb-[3rem]'>
-        O <span className='text-black font-bold'>React</span> foi um grande passo 
-        para eu desenvolver o gosto pela programação, com inúmeras funcionalidades 
-        que me ajudaram muito a entender como funcionam diversas situações. 
-        O <span className='text-black font-bold'>Java</span> aliado ao 
-        <span className='text-black font-bold'> Spring Boot</span> me permitiu 
-        expandir meus conhecimentos para o back-end, consolidando meu caminho 
-        como <span className='text-black font-bold'>Full Stack</span>. 
-        O <span className='text-black font-bold'>SEO</span> também é uma das prioridades: 
-        desde o advento do HTML5, faz-se necessário dar atenção a esse parâmetro tão importante 
-        dos websites. Estou sempre tentando desenvolver sistemas que resolvam algum tipo de problema 
-        que percebo no dia a dia da internet, unindo boas práticas de 
-        <span className='text-black font-bold'> UI/UX</span>, performance e escalabilidade.
+        <div className='bg-gradient-to-br from-[#1a2332] to-[#0f1620] border border-[#1CB5E0]/20 rounded-lg p-6 hover:border-[#1CB5E0]/60 hover:shadow-[0_0_30px_rgba(28,181,224,0.3)] transition-all duration-500'>
+          <p className='text-gray-300 text-base leading-relaxed'>
+            O <span className='text-[#1CB5E0] font-bold'>React</span> {t.about.paragraph2} 
+            O <span className='text-[#1CB5E0] font-bold'>Java</span> {t.about.paragraph2Continuation} 
+            <span className='text-[#1CB5E0] font-bold'> Spring Boot</span> {t.about.paragraph2Middle} 
+            <span className='text-[#1CB5E0] font-bold'>Full Stack</span>. 
+            O <span className='text-[#1CB5E0] font-bold'>SEO</span> {t.about.paragraph2End} 
+            <span className='text-[#1CB5E0] font-bold'> UI/UX</span>, {t.about.performance}
+          </p>
+        </div>
       </div>
     </div>
   )
