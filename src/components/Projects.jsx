@@ -55,7 +55,6 @@ const Projects = () => {
         {projectsData.map((project, index) => (
           <Card key={index} className='bg-gradient-to-br from-[#1a2332] to-[#0f1620] border border-[#1CB5E0]/20 overflow-hidden hover:border-[#1CB5E0]/60 hover:shadow-[0_0_30px_rgba(28,181,224,0.3)] transition-all duration-500 group'>
             
-            {/* GitHub Preview Section */}
             <div className='relative w-full bg-[#0d1117] border-b border-[#1CB5E0]/20 overflow-hidden group/image'>
               <img 
                 src={project.image} 
@@ -64,7 +63,6 @@ const Projects = () => {
                 loading="lazy"
               />
               
-              {/* Hover Overlay with Icons */}
               <div className='absolute inset-0 bg-gradient-to-br from-[#1a2332]/95 to-[#0f1620]/95 opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4'>
                 {project.liveUrl && (
                   <a
@@ -91,9 +89,7 @@ const Projects = () => {
               </div>
             </div>
             
-            {/* Content Section */}
             <div className='p-6 space-y-4'>
-              {/* Title and Technologies Badge */}
               <div className='space-y-3'>
                 <div className='flex items-start justify-between gap-3'>
                   <CardTitle className='text-white text-2xl font-bold group-hover:text-[#1CB5E0] transition-colors duration-300'>
@@ -101,8 +97,7 @@ const Projects = () => {
                   </CardTitle>
                   <FaGithub className='text-gray-400 flex-shrink-0 mt-1' size={24} />
                 </div>
-                
-                {/* Tech Tags */}
+
                 <div className='flex flex-wrap gap-2'>
                   {project.technologies.map((tech, techIndex) => (
                     <span 
@@ -114,13 +109,9 @@ const Projects = () => {
                   ))}
                 </div>
               </div>
-              
-              {/* Description */}
               <CardDescription className='text-gray-300 text-base leading-relaxed'>
                 {project.description}
               </CardDescription>
-              
-              {/* GitHub Link */}
               {project.githubUrl && (
                 <div className='pt-2'>
                   <a 

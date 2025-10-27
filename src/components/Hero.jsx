@@ -47,7 +47,7 @@ const Hero = () => {
             <a 
               href={ats_pedrolukas}
               download
-              className='px-6 py-3 bg-gradient-to-br from-[#1a2332] to-[#0f1620] text-white font-semibold border border-[#1CB5E0]/30 rounded-lg hover:border-[#1CB5E0]/60 hover:shadow-[0_0_20px_rgba(28,181,224,0.3)] transition-all duration-200'
+              className='px-6 py-3 bg-[#1CB5E0] text-[#0f1620] font-semibold rounded-lg hover:bg-[#1698bd] transition-colors duration-200'
             >
               {t.hero.downloadBtn}
             </a>
