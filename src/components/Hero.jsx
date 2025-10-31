@@ -1,7 +1,7 @@
 import React from 'react'
 import { TypeAnimation } from 'react-type-animation';
 import eu_cartoon from '../imgs/eu_cartoon.jpg';
-import ats_pedrolukas from '../imgs/ats_pedrolukas.pdf';
+import pedrolukas_ats from '../imgs/pedrolukas_ats.pdf';
 import { useLanguage } from '../contexts/LanguageContext';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
@@ -45,7 +45,7 @@ const Hero = () => {
               {t.hero.contactBtn}
             </a>
             <a 
-              href={ats_pedrolukas}
+              href={pedrolukas_ats}
               download
               className='px-6 py-3 bg-[#1CB5E0] text-[#0f1620] font-semibold rounded-lg hover:bg-[#1698bd] transition-colors duration-200'
             >

@@ -55,7 +55,7 @@ const BarNav = () => {
                 height: '1.5em',
               }}
             />
-            <span className='text-[16px]'>{language === 'pt-BR' ? 'EN' : 'PT'}</span>
+            <span className='text-[16px]'>{language === 'pt-BR' ? 'EN' : 'BR'}</span>
           </button>
         </div>
 
