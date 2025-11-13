@@ -23,6 +23,15 @@ const projectsData = [
     liveUrl: ""
   },
 
+  {
+    title: "E-commerce JAVA (CRUD)",
+    description: "Um crud usando os princípios básicos do JAVA",
+    image: "https://opengraph.githubassets.com/1/PedrooLukas/CRUD-Java",
+    technologies: ["Java"],
+    githubUrl: "https://github.com/PedrooLukas/CRUD-Java",
+    liveUrl: "https://pedrolukas.github.io/CRUD-Java/"
+  },
+
     {
     title: "Gerador de QR Code",
     description: "Gera um QR Code baseado no link colado!",
