@@ -1,7 +1,7 @@
 import React from 'react'
 import { TypeAnimation } from 'react-type-animation';
 import eu_cartoon from '../imgs/eu_cartoon.jpg';
-import pedrolukas_ats from '../imgs/pedrolukas_ats.pdf';
+import pedrolukas_ats from '../imgs/pedrocv.pdf';
 import { useLanguage } from '../contexts/LanguageContext';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
