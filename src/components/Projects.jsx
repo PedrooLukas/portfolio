@@ -14,6 +14,15 @@ const projectsData = [
     liveUrl: "https://github.com/PedrooLukas/stack-selector"
   },
 
+      {
+    title: "Improved Linkedin",
+    description: "Um sistema que faz uma análise pontual do Linkedin.",
+    image: "https://opengraph.githubassets.com/PedrooLukas/linkedin-connections",
+    technologies: ["Spring Boot", "Maven", "Next.JS", "Tailwind"],
+    githubUrl: "https://github.com/PedrooLukas/linkedin-connections",
+    liveUrl: "https://github.com/PedrooLukas/linkedin-connections"
+  },
+
   {
     title: "Meu portfólio",
     description: "Meu portfólio pessoal, onde apresento os meus projetos desenvolvidos.",
