@@ -17,7 +17,7 @@ const projectsData = [
       {
     title: "Improved Linkedin",
     description: "Um sistema que faz uma análise pontual do Linkedin.",
-    image: "https://opengraph.githubassets.com/PedrooLukas/linkedin-connections",
+    image: "https://opengraph.githubassets.com/1/PedrooLukas/linkedin-connections",
     technologies: ["Spring Boot", "Maven", "Next.JS", "Tailwind"],
     githubUrl: "https://github.com/PedrooLukas/linkedin-connections",
     liveUrl: "https://github.com/PedrooLukas/linkedin-connections"
